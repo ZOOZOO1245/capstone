@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>크림 - K-Beauty Shop</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/products.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html">K-Beauty</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="cream.html" class="active">크림</a></li>
+                <li><a href="toner.html">토너</a></li>
+                <li><a href="serum.html">세럼</a></li>
+                <li><a href="lotion.html">로션</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="../login.html">로그인</a>
+                <a href="../signup.html">회원가입</a>
+                <div class="cart-icon">
+                    <a href="../cart.html">
+                        <span class="cart-text">장바구니</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="product-container">
+            <div class="filter-section">
+                <button class="sort-btn" data-sort="price-low">낮은 가격순</button>
+                <button class="sort-btn" data-sort="price-high">높은 가격순</button>
+                <button class="sort-btn" data-sort="discount">할인율순</button>
+            </div>
+            <div id="productGrid" class="product-grid">
+                <!-- JavaScript로 동적 생성됨 -->
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/products.js"></script>
+</body>
+</html> 

@@ -1,0 +1,337 @@
+/* 히어로 섹션 개선 */
+.hero {
+    height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 15px;
+    color: #333;
+    max-width: 800px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.secondary-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border: 2px solid #ff6b6b;
+    color: #ff6b6b;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.secondary-button:hover {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+/* 이벤트 배너 */
+.event-banner {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+}
+
+.event-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.event-item {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.event-item:hover {
+    transform: translateY(-5px);
+}
+
+.event-item i {
+    font-size: 2.5rem;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+}
+
+/* 베스트 셀러 섹션 */
+.best-sellers {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.best-sellers h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.best-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.best-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.best-card:hover {
+    transform: translateY(-5px);
+}
+
+.best-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #ff6b6b;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.best-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.best-info {
+    padding: 1.5rem;
+}
+
+.category-tag {
+    display: inline-block;
+    background: #f8f9fa;
+    color: #666;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.best-name {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.price-info {
+    margin-bottom: 1rem;
+}
+
+.original-price {
+    color: #999;
+    text-decoration: line-through;
+    margin-right: 0.5rem;
+}
+
+.current-price {
+    color: #ff6b6b;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.discount-tag {
+    background: #ff6b6b;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+/* 카테고리 쇼케이스 */
+.category-showcase {
+    background-color: #f8f9fa;
+    padding: 4rem 2rem;
+}
+
+.category-showcase h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.category-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.category-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.category-card h3 {
+    padding: 1rem;
+    margin: 0;
+}
+
+.category-card p {
+    padding: 0 1rem 1rem;
+    color: #666;
+    margin: 0;
+}
+
+/* 특별 할인 섹션 */
+.special-offers {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.special-offers h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.offer-card {
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.offer-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #ff6b6b;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.offer-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.offer-content {
+    padding: 1.5rem;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #666;
+}
+
+.discount-price {
+    color: #ff6b6b;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.offer-button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.offer-button:hover {
+    background: #ff5252;
+}
+
+/* 푸터 개선 */
+footer {
+    background: #333;
+    color: white;
+    padding: 3rem 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+} 

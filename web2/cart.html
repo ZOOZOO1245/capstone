@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니 - K-Beauty Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">K-Beauty</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="products/cream.html">크림</a></li>
+                <li><a href="products/toner.html">토너</a></li>
+                <li><a href="products/serum.html">세럼</a></li>
+                <li><a href="products/lotion.html">로션</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="login.html">로그인</a>
+                <a href="signup.html">회원가입</a>
+                <div class="cart-icon">
+                    <a href="cart.html" class="active">
+                        <span class="cart-text">장바구니</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="cart-container">
+        <div class="cart-header">
+            <a href="javascript:history.back()" class="back-btn">< 장바구니</a>
+            <a href="index.html" class="home-btn">⌂</a>
+        </div>
+
+        <div class="cart-count">
+            전체 <span id="totalCount">0</span> PLUS배송 <span id="plusCount">0</span>
+        </div>
+
+        <div class="cart-select">
+            <label>
+                <input type="checkbox" id="selectAll"> 전체 선택
+            </label>
+            <button class="select-delete">선택 삭제</button>
+        </div>
+
+        <div id="cart-items">
+            <!-- 장바구니 아이템들이 여기에 표시됩니다 -->
+        </div>
+
+        <div id="cart-total">
+            <!-- 총 금액이 여기에 표시됩니다 -->
+        </div>
+
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>상품금액</span>
+                <span id="subtotal">0원</span>
+            </div>
+            <div class="summary-row">
+                <span>할인금액</span>
+                <span id="discount" class="discount">0원</span>
+            </div>
+            <div class="summary-row">
+                <span>배송비</span>
+                <span id="shipping">0원</span>
+            </div>
+            <div class="summary-row total">
+                <span>결제예정금액</span>
+                <span id="total">0원</span>
+            </div>
+        </div>
+
+        <button id="checkoutButton" class="checkout-button">구매하기 (0개)</button>
+        <p class="free-delivery-notice">* 5만원 이상 구매 시 무료배송</p>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>고객센터</h3>
+                <p>전화: 1234-5678</p>
+                <p>이메일: support@kbeauty.com</p>
+                <p>운영시간: 평일 09:00 - 18:00</p>
+            </div>
+            <div class="footer-section">
+                <h3>쇼핑 가이드</h3>
+                <ul>
+                    <li><a href="#" onclick="showGuideModal('terms')">이용약관</a></li>
+                    <li><a href="#" onclick="showGuideModal('privacy')">개인정보처리방침</a></li>
+                    <li><a href="#" onclick="showGuideModal('shipping')">배송안내</a></li>
+                    <li><a href="#" onclick="showGuideModal('returns')">반품/교환안내</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>소셜 미디어</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/kbeauty" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script>
+        // 페이지 로드 시 장바구니 표시
+        document.addEventListener('DOMContentLoaded', () => {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            if (cart.length > 0) {
+                displayCart();
+            }
+        });
+    </script>
+</body>
+</html> 

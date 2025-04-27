@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Beauty Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="eco-decoration"></div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Perscent</a>
+            </div>
+            <div class="search-container">
+                <form class="search-form" onsubmit="handleSearch(event)">
+                    <input type="text" class="search-input" placeholder="제품을 검색해보세요">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <ul class="nav-links">
+                <li><a href="products/cream.html">크림</a></li>
+                <li><a href="products/toner.html">토너</a></li>
+                <li><a href="products/serum.html">세럼</a></li>
+                <li><a href="products/lotion.html">로션</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="login.html">로그인</a>
+                <a href="signup.html">회원가입</a>
+                <div class="cart-icon">
+                    <a href="cart.html">
+                        <span class="cart-text">장바구니</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>당신의 아름다움을 위한 최고의 선택</h1>
+                <p>프리미엄 K-뷰티 제품을 만나보세요</p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="cta-button">쇼핑하기</a>
+                    <a href="signup.html" class="secondary-button">신규 가입 시 15% 할인</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="floating-elements">
+            <div class="floating-element leaf1" style="top: 15%; left: 10%"></div>
+            <div class="floating-element leaf2" style="top: 65%; left: 85%"></div>
+            <div class="floating-element flower1" style="top: 25%; left: 65%"></div>
+            <div class="floating-element flower2" style="top: 75%; left: 25%"></div>
+            <div class="floating-element leaf1" style="top: 45%; left: 45%"></div>
+            <div class="floating-element flower1" style="top: 85%; left: 75%"></div>
+            <div class="floating-element leaf2" style="top: 35%; left: 15%"></div>
+            <div class="floating-element flower2" style="top: 55%; left: 90%"></div>
+            <div class="floating-element leaf1" style="top: 20%; left: 80%"></div>
+            <div class="floating-element flower1" style="top: 70%; left: 5%"></div>
+        </div>
+
+        <section class="event-banner">
+            <div class="event-content">
+                <div class="event-item">
+                    <i class="fas fa-gift"></i>
+                    <h3>신규 회원 특별 혜택</h3>
+                    <p>가입 즉시 15% 할인 쿠폰 지급</p>
+                </div>
+                <div class="event-item">
+                    <i class="fas fa-truck"></i>
+                    <h3>무료 배송</h3>
+                    <p>5만원 이상 구매 시</p>
+                </div>
+                <div class="event-item">
+                    <i class="fas fa-percent"></i>
+                    <h3>첫 구매 더블 포인트</h3>
+                    <p>구매 금액의 5% 적립</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="best-sellers">
+            <h2>베스트 셀러</h2>
+            <div class="best-grid">
+                <!-- JavaScript로 동적 생성됨 -->
+            </div>
+        </section>
+
+        <section class="category-showcase">
+            <h2>카테고리별 추천</h2>
+            <div class="category-grid">
+                <a href="products/cream.html" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500" alt="크림">
+                    <h3>크림</h3>
+                    <p>피부 타입별 맞춤 크림</p>
+                </a>
+                <a href="products/toner.html" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1573575155376-b5010099301b?w=500" alt="토너">
+                    <h3>토너</h3>
+                    <p>촉촉한 수분 공급</p>
+                </a>
+                <a href="products/serum.html" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=500" alt="세럼">
+                    <h3>세럼</h3>
+                    <p>고농축 영양 케어</p>
+                </a>
+                <a href="products/lotion.html" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=500" alt="로션">
+                    <h3>로션</h3>
+                    <p>부드러운 보습 케어</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="special-offers">
+            <h2>특별 할인</h2>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <div class="offer-tag">HOT DEAL</div>
+                    <img src="https://images.unsplash.com/photo-1617897903246-719242758050?w=500" alt="특가 상품">
+                    <div class="offer-content">
+                        <h3>수분 크림 기획세트</h3>
+                        <p class="original-price">58,000원</p>
+                        <p class="discount-price">39,800원</p>
+                        <button class="offer-button">구매하기</button>
+                    </div>
+                </div>
+                <!-- 추가 특가 상품들 -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>고객센터</h3>
+                <p>전화: 1234-5678</p>
+                <p>이메일: support@perscent.com</p>
+                <p>운영시간: 평일 09:00 - 18:00</p>
+            </div>
+            <div class="footer-section">
+                <h3>쇼핑 가이드</h3>
+                <ul>
+                    <li><a href="#" onclick="showGuideModal('terms')">이용약관</a></li>
+                    <li><a href="#" onclick="showGuideModal('privacy')">개인정보처리방침</a></li>
+                    <li><a href="#" onclick="showGuideModal('shipping')">배송안내</a></li>
+                    <li><a href="#" onclick="showGuideModal('returns')">반품/교환안내</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>소셜 미디어</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/perscent" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 가이드 모달 추가 -->
+    <div id="guideModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- 기존 스크립트 위에 guide.js 추가 -->
+    <script src="js/guide.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

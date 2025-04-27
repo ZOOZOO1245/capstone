@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전체 제품 - K-Beauty Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/products.css">
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="eco-decoration"></div>
+    
+    <!-- 헤더는 기존과 동일 -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">K-Beauty</a>
+            </div>
+            <div class="search-container">
+                <form class="search-form" onsubmit="handleSearch(event)">
+                    <input type="text" class="search-input" placeholder="제품을 검색해보세요">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <ul class="nav-links">
+                <li><a href="products/cream.html">크림</a></li>
+                <li><a href="products/toner.html">토너</a></li>
+                <li><a href="products/serum.html">세럼</a></li>
+                <li><a href="products/lotion.html">로션</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="login.html">로그인</a>
+                <a href="signup.html">회원가입</a>
+                <div class="cart-icon">
+                    <a href="cart.html">
+                        <span class="cart-text">장바구니</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="products-page">
+        <section class="products-header">
+            <h1>전체 제품</h1>
+            <div class="filter-sort">
+                <div class="filter">
+                    <select id="categoryFilter">
+                        <option value="all">전체 카테고리</option>
+                        <option value="cream">크림</option>
+                        <option value="toner">토너</option>
+                        <option value="serum">세럼</option>
+                        <option value="lotion">로션</option>
+                    </select>
+                </div>
+                <div class="sort">
+                    <select id="sortProducts">
+                        <option value="newest">최신순</option>
+                        <option value="price-low">가격 낮은순</option>
+                        <option value="price-high">가격 높은순</option>
+                        <option value="discount">할인율순</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-grid" id="productsGrid">
+            <!-- 제품들이 동적으로 추가됨 -->
+        </section>
+    </main>
+
+    <!-- 푸터는 기존과 동일 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>고객센터</h3>
+                <p>전화: 1234-5678</p>
+                <p>이메일: support@kbeauty.com</p>
+                <p>운영시간: 평일 09:00 - 18:00</p>
+            </div>
+            <div class="footer-section">
+                <h3>쇼핑 가이드</h3>
+                <ul>
+                    <li><a href="#" onclick="showGuideModal('terms')">이용약관</a></li>
+                    <li><a href="#" onclick="showGuideModal('privacy')">개인정보처리방침</a></li>
+                    <li><a href="#" onclick="showGuideModal('shipping')">배송안내</a></li>
+                    <li><a href="#" onclick="showGuideModal('returns')">반품/교환안내</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>소셜 미디어</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/kbeauty" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 제품 상세 모달 추가 -->
+    <div id="productModal" class="modal">
+        <div class="modal-content product-detail">
+            <span class="close">&times;</span>
+            <div class="product-detail-content">
+                <div class="product-detail-image">
+                    <img src="" alt="" id="modalProductImage">
+                </div>
+                <div class="product-detail-info">
+                    <h2 id="modalProductName"></h2>
+                    <div class="price-section">
+                        <span class="original-price" id="modalOriginalPrice"></span>
+                        <span class="current-price" id="modalCurrentPrice"></span>
+                        <span class="discount-tag" id="modalDiscountTag"></span>
+                    </div>
+                    <div class="product-description" id="modalDescription"></div>
+                    <div class="product-volume" id="modalVolume"></div>
+                    <div class="how-to-use">
+                        <h3>사용방법</h3>
+                        <p id="modalHowToUse"></p>
+                    </div>
+                    <button class="add-to-cart-btn" id="modalAddToCart">장바구니 담기</button>
+                </div>
+            </div>
+            <div class="product-additional-info">
+                <div class="ingredients-section">
+                    <h3>주요 성분</h3>
+                    <ul id="modalIngredients"></ul>
+                </div>
+                <div class="product-specs">
+                    <h3>제품 정보</h3>
+                    <table>
+                        <tr>
+                            <th>적합한 피부 타입</th>
+                            <td id="modalSkinType"></td>
+                        </tr>
+                        <tr>
+                            <th>제조국</th>
+                            <td id="modalMadeIn"></td>
+                        </tr>
+                        <tr>
+                            <th>사용기한</th>
+                            <td id="modalExpiry"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/products.js"></script>
+</body>
+</html> 
