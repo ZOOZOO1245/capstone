@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세럼 - K-Beauty Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="top-banner">
+            <p>신규 회원 가입 시 즉시 사용 가능한 3만원 할인 쿠폰 증정!</p>
+        </div>
+        <nav class="top-nav">
+            <div class="nav-left">
+                <a href="index.html" class="logo">K-Beauty</a>
+            </div>
+            <div class="nav-center">
+                <div class="search-bar">
+                    <input type="text" placeholder="검색어를 입력하세요">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="nav-right">
+                <a href="#" class="login-btn">로그인</a>
+                <a href="#" class="signup-btn">회원가입</a>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </nav>
+        <nav class="category-nav">
+            <ul>
+                <li><a href="cream.html">크림</a></li>
+                <li><a href="lotion.html">로션</a></li>
+                <li><a href="toner.html">토너</a></li>
+                <li><a href="serum.html" class="active">세럼</a></li>
+                <li><a href="allinone.html">올인원</a></li>
+                <li><a href="event.html">이벤트</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="category-header">
+            <h1>세럼</h1>
+            <div class="category-filters">
+                <select class="sort-filter">
+                    <option value="popular">인기순</option>
+                    <option value="new">신상품순</option>
+                    <option value="low">낮은가격순</option>
+                    <option value="high">높은가격순</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="product-list">
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-badge">BEST</div>
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x300" alt="비타민 세럼">
+                    </div>
+                    <div class="product-info">
+                        <span class="brand">디오디너리</span>
+                        <h3 class="product-title">비타민C 23% + 하이알루론산 2%</h3>
+                        <div class="product-price">
+                            <span class="discount">20%</span>
+                            <span class="current-price">15,200원</span>
+                            <span class="original-price">19,000원</span>
+                        </div>
+                        <div class="product-tags">
+                            <span class="tag">미백</span>
+                            <span class="tag">베스트</span>
+                        </div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> 담기</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">NEW</div>
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x300" alt="히알루론산 세럼">
+                    </div>
+                    <div class="product-info">
+                        <span class="brand">아이오페</span>
+                        <h3 class="product-title">히알루론산 슈퍼 바이탈 세럼</h3>
+                        <div class="product-price">
+                            <span class="discount">30%</span>
+                            <span class="current-price">38,500원</span>
+                            <span class="original-price">55,000원</span>
+                        </div>
+                        <div class="product-tags">
+                            <span class="tag">수분충전</span>
+                            <span class="tag">신상품</span>
+                        </div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> 담기</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">HOT</div>
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x300" alt="나이아신아마이드 세럼">
+                    </div>
+                    <div class="product-info">
+                        <span class="brand">미샤</span>
+                        <h3 class="product-title">타임 레볼루션 나이트 리페어 앰플</h3>
+                        <div class="product-price">
+                            <span class="discount">25%</span>
+                            <span class="current-price">41,250원</span>
+                            <span class="original-price">55,000원</span>
+                        </div>
+                        <div class="product-tags">
+                            <span class="tag">안티에이징</span>
+                            <span class="tag">1+1</span>
+                        </div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> 담기</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">SALE</div>
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x300" alt="펩타이드 세럼">
+                    </div>
+                    <div class="product-info">
+                        <span class="brand">닥터자르트</span>
+                        <h3 class="product-title">펩타이드 파워 세럼</h3>
+                        <div class="product-price">
+                            <span class="discount">40%</span>
+                            <span class="current-price">35,400원</span>
+                            <span class="original-price">59,000원</span>
+                        </div>
+                        <div class="product-tags">
+                            <span class="tag">탄력</span>
+                            <span class="tag">한정판</span>
+                        </div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> 담기</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">BEST</div>
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x300" alt="시카 세럼">
+                    </div>
+                    <div class="product-info">
+                        <span class="brand">라운드랩</span>
+                        <h3 class="product-title">1025 독도 시카 앰플</h3>
+                        <div class="product-price">
+                            <span class="discount">15%</span>
+                            <span class="current-price">21,250원</span>
+                            <span class="original-price">25,000원</span>
+                        </div>
+                        <div class="product-tags">
+                            <span class="tag">진정</span>
+                            <span class="tag">수분</span>
+                        </div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> 담기</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">LIMITED</div>
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x300" alt="콜라겐 세럼">
+                    </div>
+                    <div class="product-info">
+                        <span class="brand">아누아</span>
+                        <h3 class="product-title">프로바이오틱스 콜라겐 세럼</h3>
+                        <div class="product-price">
+                            <span class="discount">35%</span>
+                            <span class="current-price">22,750원</span>
+                            <span class="original-price">35,000원</span>
+                        </div>
+                        <div class="product-tags">
+                            <span class="tag">탄력</span>
+                            <span class="tag">기획세트</span>
+                        </div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> 담기</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>고객센터</h3>
+                <p>1234-5678</p>
+                <p>평일 09:00 - 18:00</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>쇼핑 안내</h3>
+                <ul>
+                    <li><a href="shipping.html">배송 안내</a></li>
+                    <li><a href="returns.html">교환/반품 안내</a></li>
+                    <li><a href="faq.html">자주 묻는 질문</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>회사 정보</h3>
+                <p>상호명: K-Beauty Shop</p>
+                <p>대표: 홍길동</p>
+                <p>사업자등록번호: 123-45-67890</p>
+                <a href="privacy.html">개인정보처리방침</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

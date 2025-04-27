@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니 - K-Beauty Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="top-banner">
+            <p>신규 회원 가입 시 즉시 사용 가능한 3만원 할인 쿠폰 증정!</p>
+        </div>
+        <nav class="top-nav">
+            <div class="nav-left">
+                <a href="index.html" class="logo">K-Beauty</a>
+            </div>
+            <div class="nav-center">
+                <div class="search-bar">
+                    <input type="text" placeholder="검색어를 입력하세요">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="nav-right">
+                <a href="#" class="login-btn">로그인</a>
+                <a href="#" class="signup-btn">회원가입</a>
+                <a href="cart.html" class="active"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+            </div>
+        </nav>
+        <nav class="category-nav">
+            <ul>
+                <li><a href="cream.html">크림</a></li>
+                <li><a href="lotion.html">로션</a></li>
+                <li><a href="toner.html">토너</a></li>
+                <li><a href="serum.html">세럼</a></li>
+                <li><a href="allinone.html">올인원</a></li>
+                <li><a href="event.html">이벤트</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="cart-page">
+        <div class="cart-container">
+            <section class="cart-header">
+                <h1>장바구니</h1>
+                <div class="cart-steps">
+                    <span class="step active">장바구니</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="step">주문/결제</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="step">주문완료</span>
+                </div>
+            </section>
+
+            <section class="cart-content">
+                <div class="cart-main">
+                    <div class="cart-controls">
+                        <div class="select-all">
+                            <input type="checkbox" id="selectAll">
+                            <label for="selectAll">전체선택</label>
+                        </div>
+                        <button class="delete-selected">선택삭제</button>
+                    </div>
+
+                    <div class="delivery-info">
+                        <i class="fas fa-truck"></i>
+                        <span>3만원 이상 구매 시 무료배송</span>
+                    </div>
+
+                    <div class="cart-items" id="cartList">
+                        <!-- JavaScript로 동적 생성됨 -->
+                    </div>
+
+                    <div class="cart-buttons">
+                        <button class="continue-shopping">쇼핑 계속하기</button>
+                        <button class="select-delete">선택상품 삭제</button>
+                    </div>
+                </div>
+
+                <div class="cart-sidebar">
+                    <div class="delivery-address">
+                        <h3><i class="fas fa-map-marker-alt"></i> 배송지</h3>
+                        <p class="address-info">배송지를 등록하고 배송비를 확인해 보세요!</p>
+                        <button class="address-btn">배송지 등록</button>
+                    </div>
+
+                    <div class="cart-summary">
+                        <h3>주문 요약</h3>
+                        <div class="summary-items">
+                            <div class="summary-item">
+                                <span>상품금액</span>
+                                <span id="subtotal">0원</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>상품할인</span>
+                                <span id="discount" class="discount">0원</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>배송비</span>
+                                <span id="shipping">0원</span>
+                            </div>
+                            <div class="summary-total">
+                                <span>결제예정금액</span>
+                                <span id="total">0원</span>
+                            </div>
+                            <div class="point-info">
+                                <i class="fas fa-coins"></i>
+                                <span>구매 시 <strong>0원 적립</strong></span>
+                            </div>
+                        </div>
+                        <button class="checkout-btn">주문하기</button>
+                    </div>
+
+                    <div class="benefit-banner">
+                        <img src="https://via.placeholder.com/300x100" alt="혜택 배너">
+                    </div>
+                </div>
+            </section>
+
+            <section class="empty-cart" id="emptyCart" style="display: none;">
+                <div class="empty-cart-content">
+                    <i class="fas fa-shopping-cart fa-3x"></i>
+                    <h2>장바구니가 비어있습니다</h2>
+                    <p>원하는 상품을 장바구니에 담아보세요!</p>
+                    <a href="index.html" class="continue-shopping-btn">쇼핑 계속하기</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>고객센터</h3>
+                <p>1234-5678</p>
+                <p>평일 09:00 - 18:00</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>쇼핑 안내</h3>
+                <ul>
+                    <li><a href="shipping.html">배송 안내</a></li>
+                    <li><a href="returns.html">교환/반품 안내</a></li>
+                    <li><a href="faq.html">자주 묻는 질문</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>회사 정보</h3>
+                <p>상호명: K-Beauty Shop</p>
+                <p>대표: 홍길동</p>
+                <p>사업자등록번호: 123-45-67890</p>
+                <a href="privacy.html">개인정보처리방침</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- 로그인 모달 -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>로그인</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">이메일</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">비밀번호</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox" id="rememberMe"> 로그인 상태 유지
+                    </label>
+                    <a href="#" class="forgot-password">비밀번호 찾기</a>
+                </div>
+                <button type="submit" class="submit-btn">로그인</button>
+                <div class="social-login">
+                    <p>간편 로그인</p>
+                    <div class="social-buttons">
+                        <button type="button" class="kakao-btn">카카오 로그인</button>
+                        <button type="button" class="naver-btn">네이버 로그인</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 회원가입 모달 -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>회원가입</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupEmail">이메일</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">비밀번호</label>
+                    <input type="password" id="signupPassword" required placeholder="8자 이상, 영문/숫자/특수문자 포함">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">비밀번호 확인</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">이름</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">휴대폰 번호</label>
+                    <input type="tel" id="phone" required placeholder="'-' 없이 입력">
+                </div>
+                <div class="agreement-group">
+                    <label>
+                        <input type="checkbox" id="agreeAll"> 전체 동의
+                    </label>
+                    <label>
+                        <input type="checkbox" required> 이용약관 동의 (필수)
+                    </label>
+                    <label>
+                        <input type="checkbox" required> 개인정보 수집 및 이용 동의 (필수)
+                    </label>
+                    <label>
+                        <input type="checkbox"> 마케팅 정보 수신 동의 (선택)
+                    </label>
+                </div>
+                <button type="submit" class="submit-btn">가입하기</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html> 

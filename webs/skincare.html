@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스킨케어 - K-Beauty Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="top-nav">
+            <div class="nav-left">
+                <a href="index.html" class="logo">K-Beauty</a>
+            </div>
+            <div class="nav-center">
+                <div class="search-bar">
+                    <input type="text" placeholder="검색어를 입력하세요">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="nav-right">
+                <a href="#" id="loginBtn">로그인</a>
+                <a href="#" id="signupBtn">회원가입</a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </nav>
+        <nav class="category-nav">
+            <ul>
+                <li><a href="skincare.html" class="active">스킨케어</a></li>
+                <li><a href="makeup.html">메이크업</a></li>
+                <li><a href="perfume.html">향수</a></li>
+                <li><a href="bodycare.html">바디케어</a></li>
+                <li><a href="haircare.html">헤어케어</a></li>
+                <li><a href="nail.html">네일</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="category-header">
+            <h1>스킨케어</h1>
+            <div class="category-filters">
+                <select class="sort-filter">
+                    <option value="popular">인기순</option>
+                    <option value="new">신상품순</option>
+                    <option value="low">낮은가격순</option>
+                    <option value="high">높은가격순</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="product-list">
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-badge">BEST</div>
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/200x200" alt="수분크림">
+                        <div class="product-hover">
+                            <button class="quick-view">퀵뷰</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="brand">이니스프리</span>
+                        <h3>그린티 수분크림</h3>
+                        <div class="product-price">
+                            <span class="discount">20%</span>
+                            <span class="price">16,000원</span>
+                            <span class="original-price">20,000원</span>
+                        </div>
+                        <div class="product-tags">
+                            <span class="tag">무료배송</span>
+                            <span class="tag">신상품</span>
+                        </div>
+                    </div>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> 담기</button>
+                </div>
+                <!-- 추가 상품들은 JavaScript로 동적 생성 -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>고객센터</h3>
+                <p>1234-5678</p>
+                <p>평일 09:00 - 18:00</p>
+            </div>
+            <div class="footer-section">
+                <h3>회사 정보</h3>
+                <p>상호명: K-Beauty Shop</p>
+                <p>대표: 홍길동</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

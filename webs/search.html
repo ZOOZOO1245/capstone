@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 결과 - K-Beauty Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="top-nav">
+            <div class="nav-left">
+                <a href="index.html" class="logo">K-Beauty</a>
+            </div>
+            <div class="nav-center">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="검색어를 입력하세요">
+                    <button id="searchButton"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="nav-right">
+                <a href="#" id="loginBtn">로그인</a>
+                <a href="#" id="signupBtn">회원가입</a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </nav>
+        <nav class="category-nav">
+            <ul>
+                <li><a href="skincare.html">스킨케어</a></li>
+                <li><a href="makeup.html">메이크업</a></li>
+                <li><a href="perfume.html">향수</a></li>
+                <li><a href="bodycare.html">바디케어</a></li>
+                <li><a href="haircare.html">헤어케어</a></li>
+                <li><a href="nail.html">네일</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-header">
+            <h1>"<span id="searchKeyword"></span>" 검색 결과</h1>
+            <div class="search-filters">
+                <select class="sort-filter">
+                    <option value="relevant">정확도순</option>
+                    <option value="popular">인기순</option>
+                    <option value="new">신상품순</option>
+                    <option value="low">낮은가격순</option>
+                    <option value="high">높은가격순</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="search-categories">
+            <div class="category-chips">
+                <button class="chip active">전체</button>
+                <button class="chip">스킨케어 <span class="count">(0)</span></button>
+                <button class="chip">메이크업 <span class="count">(0)</span></button>
+                <button class="chip">향수 <span class="count">(0)</span></button>
+                <button class="chip">바디케어 <span class="count">(0)</span></button>
+            </div>
+        </section>
+
+        <section class="search-results">
+            <div id="searchResultsCount" class="results-count">
+                총 <strong>0</strong>개의 상품이 있습니다.
+            </div>
+            <div class="product-grid" id="searchResults">
+                <!-- 검색 결과는 JavaScript로 동적 생성 -->
+            </div>
+        </section>
+
+        <section class="no-results" id="noResults" style="display: none;">
+            <div class="no-results-content">
+                <i class="fas fa-search fa-3x"></i>
+                <h2>검색 결과가 없습니다.</h2>
+                <p>다른 검색어를 입력하시거나 철자와 띄어쓰기를 확인해 주세요.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>고객센터</h3>
+                <p>1234-5678</p>
+                <p>평일 09:00 - 18:00</p>
+            </div>
+            <div class="footer-section">
+                <h3>회사 정보</h3>
+                <p>상호명: K-Beauty Shop</p>
+                <p>대표: 홍길동</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
